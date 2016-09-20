@@ -1,0 +1,14 @@
+{
+  "name": "gumshoe",
+  "homepage": "https://github.com/cferdinandi/gumshoe",
+  "_release": "0d3ee52de2",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "0d3ee52de2e642ecb98657edbb3155cb70f2c8c4"
+  },
+  "_source": "git://github.com/cferdinandi/gumshoe.git",
+  "_target": "*",
+  "_originalSource": "cferdinandi/gumshoe",
+  "_direct": true
+}

@@ -1,0 +1,23 @@
+{
+  "name": "website",
+  "version": "0.0.0",
+  "homepage": "gregd.me",
+  "authors": [
+    "Greg Dorrell <greg@dorrell.me>"
+  ],
+  "main": "styles/main.css",
+  "license": "N/A",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gumshoe": "cferdinandi/gumshoe",
+    "lodash": "~2.4.1",
+    "smooth-scroll": "cferdinandi/smooth-scroll"
+  }
+}

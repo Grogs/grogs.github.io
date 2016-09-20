@@ -1,0 +1,144 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+a.anchor{display: block; position: relative; top: -250px; visibility: hidden;}
+
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "base/base";
+
+
+$nav-bg: $blue;
+$btn-bg: #f05f5c;
+$stack-bg: #4ACA47;
+$github-bg: #47BBCA;
+
+
+// $btn-bg-hover: #cc504e;
+$btn-bg-hover: $btn-bg - #300000;
+$nav-height: 1.8em;
+
+body { font-family: $helvetica; }
+
+nav {
+	padding: 0;
+	background: $blue;
+	color: white;
+	position: fixed;
+	top: 0;
+	width: 100%;
+  z-index: 1; 
+	// height: 31px;
+	a {
+		height: $nav-height;
+		display:inline-block;
+		margin-left: 6px;
+		padding:0 6px;
+		color: white;
+		&.active { border-bottom: white 4px solid; }
+		&:hover { border-bottom: ($blue + #555555) 5px solid; }
+		&.active, &:hover, &:focus { color: white; }
+	}
+	.label { 
+		color: $blue + #404040;
+		margin: 0 -5px 0 20px; 
+	}
+	.logo {
+		margin-right: 6px;
+	}
+
+}
+
+section#about, .section-container.about { background: $blue; }
+section#about { color: white; }
+.section-container.about { 	padding-top: 2em; }
+
+section {
+  padding: $nav-height + 0.5em;
+  @include outer-container;
+  margin: auto;
+  aside { @include span-columns(3); }
+  article { @include span-columns(9); }
+  .btn { 
+  	@extend button;
+	background: $btn-bg;
+	&:focus { background: $btn-bg; }
+	&:hover { background: $btn-bg-hover; }
+  }
+}
+
+.vertical-align {
+	   //  display: table-cell;
+    // vertical-align: middle;
+
+  // position: relative;
+  // top: 50%;
+  // -webkit-transform: translateY(-50%);
+  // -ms-transform: translateY(-50%);
+  // transform: translateY(-50%);
+}
+
+
+.stacktag {
+	color: white;
+	border-radius: 0.2em;
+	padding: 0.2em 0.4em;
+	display: inline-block;
+	margin: 0.2em 0.1em;
+	background: $stack-bg;
+}
+
+.github {
+	color: white;
+	border-radius: 0.2em;
+	padding: 0.2em 0.4em;
+	display: inline-block;
+	margin: 0.2em 0.1em;
+	background: $github-bg;
+	a {
+		color: white;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+strong { font-weight: bold; }
+
+article > div { margin-bottom: 10px; }
+
+$parallax-window-height: 290px;
+
+div[parallax] {
+ 	max-height: $parallax-window-height;
+	overflow: hidden;
+	position: relative;
+	-webkit-transition: max-height 0.8s;
+	-moz-transition: max-height 0.8s;
+	transition: max-height 0.8s;
+	div[hint] {
+		
+	}
+}
+
+// div.grow {
+// 	max-height: 290px;
+// 	overflow: hidden;
+// 	-webkit-transition: max-height 0.8s;
+// 	-moz-transition: max-height 0.8s;
+// 	transition: max-height 0.8s;
+// }
+
+div.grow:hover {
+	max-height: 900px;
+}
+
+
+
+
+
+
+
+
+
+

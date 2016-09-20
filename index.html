@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Greg Dorrell</title>
+	<link rel="stylesheet" type="text/css" href="styles/main.css" />
+	<!-- JS imports at the bottom -->
+</head>
+<body>
+
+	<nav data-gumshoe-header data-gumshoe>
+		<span class="logo">Greg Dorrell</span>
+		<a class="active" data-scroll href="#about">About</a>
+		<span class="label">projects:</span>
+		<a data-scroll href="#artimap">artimap</a>
+		<a data-scroll href="#fulfilmed">fulfilmed</a>
+		<a data-scroll href="#domcomp">domcomp</a>
+		<a data-scroll href="#javadoc">javadoc.io</a>
+	</nav>
+
+	<div class="section-container about">
+		<section id="about">
+			<h1>Hey, I'm Greg</h1>
+			<p>I am a full stack Scala web developer based in London. Working in finance professionally. Below are a few personal projects that are online.</p>
+		</section>
+	</div>
+	
+	<div class="section-container">
+    <section id="artimap" class="project">
+			<aside>
+				Stack: 
+				<span class="stacktag">Scala</span>
+				<span class="stacktag">Scala.js</span>
+				<span class="stacktag">Play</span>
+				<span class="stacktag">MapDB</span>
+			</aside>
+			<article>
+				<strong>artimap</strong> turns timeout articles into maps for easier consumption. 
+				<div><a class="btn" href="http://artimap.com">Go to artimap</a></div>
+				<div parallax class="grow">
+					<div hint>Hover to expand</div>
+					<img src="images/artimap_756.png" alt="artimap screenshot">
+				</div>
+			</article>		
+		</section>
+	</div>
+	
+	<div class="section-container">
+		<section id="fulfilmed" class="project">
+			<aside>
+				GitHub: 
+				<span class="github"><a href="http://github.com/Grogs/cinema-frontend">frontend</a></span>
+				<span class="github"><a href="http://github.com/Grogs/cinema-service">backend</a></span>
+				<br />
+				Stack: 
+				<span class="stacktag">Scala</span>
+				<span class="stacktag">Polymer</span>
+				<span class="stacktag">Scalatra</span>
+				<span class="stacktag">Slick</span>
+				<span class="stacktag">Gradle</span>
+
+			</aside>
+			<article>
+				<strong>Fulfilmed</strong> is a website for enhanced today/tomorrow UK cinema listings. Supporting Cineworld and Odeon cinemas.
+				<div><a class="btn" href="http://fulfilmed.com">Go to fulfilmed</a></div>
+				<div parallax class="grow">
+					<div hint>Hover to expand</div>
+					<img src="images/fulfilmed_756.png" alt="fulfilmed screenshot">
+				</div>
+			</article>		
+		</section>
+	</div>
+	
+	<div class="section-container">
+		<section id="domcomp" class="project">
+			<aside>
+				Stack: 
+				<span class="stacktag">Scala</span>
+				<span class="stacktag">Play</span>
+				<span class="stacktag">Bootstrap</span>
+				<span class="stacktag">jQuery</span>
+				<span class="stacktag">Vue.js</span>
+			</aside>
+			<article>
+				<strong>domcomp</strong> - a portmanteau of domain and comparison - is a price comparison site for domain registars. Covering almost 3000 TLDs across 30 registrars. The site also provides reviews/ratings for the registrars covered.
+				<div><a class="btn" href="http://domcomp.com">Go to domcomp</a></div>
+				<div parallax class="grow">
+					<div hint>Hover to expand</div>
+					<img src="images/domcomp_756.png" alt="">
+				</div>
+			</article>
+
+		</section>
+	</div>
+
+	<div class="section-container">
+		<section id="javadoc" class="project">
+			<aside>
+				Stack: 
+				<span class="stacktag">Scala</span>
+				<span class="stacktag">Play</span>
+				<span class="stacktag">ElasticSearch</span>
+				<span class="stacktag">S3</span>
+			</aside>
+			<article>
+				<strong>javadoc.io</strong> provides free javadoc hosting for all projects hosted on Maven Central. No setup needed by project owners. Always up-to-date latest version.	
+				<div><a class="btn" href="http://javadoc.io">Go to javadoc.io</a></div>
+				<div parallax class="grow">
+					<div hint>Hover to expand</div>
+					<img src="images/javadocio_756.png" alt="">
+				</div>
+			</article>
+			
+		</section>
+	</div>
+	
+	<div id="emptyspace"></div>
+
+	<script src="bower_components/lodash/dist/lodash.min.js"></script>
+	<script src="bower_components/gumshoe/dist/js/classList.min.js"></script>
+	<script src="bower_components/gumshoe/dist/js/gumshoe.min.js"></script>
+	<script src="bower_components/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
+	<script type="text/javascript">
+		var resize = function(){
+			// _.forEach(
+			// 	document.querySelectorAll('section.project'), 
+			// 	function(s){
+			// 		s.style.minHeight = (window.outerHeight / 2) + "px"
+			// 	}
+			// )
+			var e=document.getElementById("emptyspace")
+			e.style.height = (window.innerHeight - e.previousElementSibling.clientHeight - 38) + "px"
+
+		}
+		window.onresize += _.debounce(resize, 50)
+		document.body.onload += resize
+
+		gumshoe.init() //scrollspy
+		smoothScroll.init() //for anchors
+
+	</script>
+</body>
+</html>
